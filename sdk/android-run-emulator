@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# Starts an emulator, runs a command once the emulator has started, then kills the emulator after
+# the command is complete
+
+set -e
+
+if [ "$#" -lt 2 ]; then
+    echo "Illegal number of parameters"
+    echo "Usage: android-run-emulator <avd-image> <command>"
+    exit 1
+fi
+
+echo "Starting emulator $1"
+android-start-emulator $1
+
+echo "Unlocking screen"
+adb shell input keyevent 82 &
+
+shift
+
+echo "executing command '$@'"
+
+$@
+
+android-kill-emulators

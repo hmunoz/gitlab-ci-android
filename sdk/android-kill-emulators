@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "Killing all running emulators"
+adb devices | grep emulator | cut -f1 | while read line; do echo "Killing $line" && adb -s $line emu kill; done

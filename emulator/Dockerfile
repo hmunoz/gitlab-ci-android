@@ -15,4 +15,4 @@ ONBUILD RUN echo "no" | android create avd \
                 --sdcard 512M
 
 # Warm up the emulators
-ONBUILD RUN android-start-emulator nexus5_${EMULATOR_VERSION} && adb -s emulator-5554 emu kill
+ONBUILD RUN android-start-emulator nexus5_${EMULATOR_VERSION} && android-kill-emulators

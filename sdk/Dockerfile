@@ -70,6 +70,11 @@ RUN chmod +x /usr/local/bin/android-update-sdk
 ADD android-start-emulator /usr/local/bin/android-start-emulator
 RUN chmod +x /usr/local/bin/android-start-emulator
 
+ADD android-run-emulator /usr/local/bin/android-run-emulator
+RUN chmod +x /usr/local/bin/android-run-emulator
+
+ADD android-kill-emulators /usr/local/bin/android-kill-emulators
+RUN chmod +x /usr/local/bin/android-kill-emulators
 
 # Install the SDK stuff
 RUN android-update-sdk "platform-tools,\
