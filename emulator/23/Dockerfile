@@ -3,8 +3,7 @@ FROM 51systems/gitlab-ci-android
 ENV EMULATOR_VERSION=23
 
 # Install the emulators stuff
-RUN android-update-sdk "sys-img-armeabi-v7a-android-${EMULATOR_VERSION},\
-    sys-img-armeabi-v7a-google_apis-${EMULATOR_VERSION}"
+RUN android-update-sdk "sys-img-armeabi-v7a-android-${EMULATOR_VERSION}"
 
 # Create the default emulators
 RUN echo "no" | android create avd \
