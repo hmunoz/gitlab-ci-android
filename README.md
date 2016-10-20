@@ -14,7 +14,7 @@ With inspiration taken from:
 | Tool  | Description  |
 |-------|--------------|
 | `android-wait-for-emulator` | Travis-ci tool available from [Github](https://github.com/travis-ci/travis-cookbooks/blob/precise-stable/ci_environment/android-sdk/files/default/android-wait-for-emulator) |
-| `android-update-sdk`        | Installs the specified SDK tool packages |
+| `android-update-sdk <packages>`        | Installs the specified SDK tool packages, automatically accepting the licenses |
 | `android-kill-emulators`    | Kills all running emulators |
 | `android-start-emulator <image> `  | Starts the emulator that matches the name specified on the command line |
 | `android-run-emulator <image> <command>` | Starts the specified emulator, runs the command (usually `./gradlew connectedAndroidTest`) and exits the emulator when done |
