@@ -4,7 +4,7 @@ set -e
 
 WAIT_FOR_EMULATOR=$(which android-wait-for-emulator)
 
-SHELL=/bin/bash emulator -noaudio -no-window -gpu off -avd $@ &
+SHELL=/bin/bash emulator -noaudio -no-window -avd $@ &
 
 echo "Waiting for device to connect to adb"
 adb wait-for-device
